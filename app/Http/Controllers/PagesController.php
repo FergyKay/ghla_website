@@ -3,11 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\News;
 
 class PagesController extends Controller
 {
     public function home(){
-        return view('index');
+        $news = News::all();
+
+        return view('index',compact('news'));
     }
 
     public function management(){

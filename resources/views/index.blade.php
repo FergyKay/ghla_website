@@ -566,18 +566,14 @@
                     <h3>Latest News</h3>
                 </header>
                 <ul>
-                    <li class="news-item-image">
-                        <a href="#"><img src="../assets/img/favicon.png"></a>
-                        <h5>Employees on sit down strike</h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is
-                            simply dummy text of the printing and typesetting industry</p>
-                    </li>
-                    <li class="news-item-image">
-                        <a href="#"><img src="../news/2-1-2019/img/tema-kids.jpg"></a>
-                        <h5>Employees on sit down strike</h5>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum is
-                            simply dummy text of the printing and typesetting industry</p>
-                    </li>
+                    @foreach($news as $newsItem)
+                        <li class="news-item-image">
+                            <a href="#"><img src="../news/2-1-2019/img/tema-kids.jpg"></a>
+                            <h5>{{$newsItem->title}}</h5>
+                            <p>{{$newsItem->content}}</p>
+                        </li>
+
+                    @endforeach
 
                 </ul>
             </div>
