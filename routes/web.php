@@ -11,10 +11,7 @@
 |
 */
 
-Route::get('/', function () {
-    return view('index');
-});
+Route::get('/', 'PagesController@home');
+Route::get('/management', 'PagesController@management');
 
-Route::get('/management', function (){
-    return view('management');
-});
+
